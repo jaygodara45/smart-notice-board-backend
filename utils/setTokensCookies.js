@@ -7,7 +7,8 @@ const setTokensCookies = (res, accessToken, refreshToken, newAccessTokenExp, new
     // httpOnly: true,
     secure: true, // Set to true if using HTTPS
     maxAge: accessTokenMaxAge,
-    sameSite: 'None', // Adjust according to your requirements
+    sameSite: 'None',
+    Partitioned: true// Adjust according to your requirements
   });
 
   // Set Cookie for Refresh Token
@@ -15,14 +16,16 @@ const setTokensCookies = (res, accessToken, refreshToken, newAccessTokenExp, new
     // httpOnly: true,
     secure: true, // Set to true if using HTTPS
     maxAge: refreshTokenmaxAge,
-    sameSite: 'None', // Adjust according to your requirements
+    sameSite: 'None', 
+    Partitioned: true// Adjust according to your requirements
   });
   // Set Cookie for is_auth
   res.cookie('is_auth', true, {
     // httpOnly: true,
     secure: true, // Set to true if using HTTPS
     maxAge: refreshTokenmaxAge,
-    sameSite: 'None', // Adjust according to your requirements
+    sameSite: 'None', 
+    Partitioned: true// Adjust according to your requirements
   });
 }
 
