@@ -7,9 +7,7 @@ const setTokensCookies = (res, accessToken, refreshToken, newAccessTokenExp, new
     httpOnly: true,
     secure: true, // Set to true if using HTTPS
     maxAge: accessTokenMaxAge,
-    sameSite: 'None',
-    domain: 'smart-notice-board-frontend-production.up.railway.app',
-    path: '/',
+    sameSite: 'None'
     // Partitioned: true// Adjust according to your requirements
   });
 
@@ -18,9 +16,7 @@ const setTokensCookies = (res, accessToken, refreshToken, newAccessTokenExp, new
     httpOnly: true,
     secure: true, // Set to true if using HTTPS
     maxAge: refreshTokenmaxAge,
-    sameSite: 'None', 
-    domain: 'smart-notice-board-frontend-production.up.railway.app',
-    path: '/',
+    sameSite: 'None'
     // Partitioned: true// Adjust according to your requirements
   });
   // Set Cookie for is_auth
@@ -28,9 +24,7 @@ const setTokensCookies = (res, accessToken, refreshToken, newAccessTokenExp, new
     httpOnly: true,
     secure: true, // Set to true if using HTTPS
     maxAge: refreshTokenmaxAge,
-    sameSite: 'None', 
-    domain: 'smart-notice-board-frontend-production.up.railway.app',
-    path: '/',
+    sameSite: 'None'
     // Partitioned: true// Adjust according to your requirements
   });
 }
